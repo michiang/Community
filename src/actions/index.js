@@ -1,9 +1,12 @@
 //All the actions that are to be dispatched by action creator
 
-/*
-export const addReview = (review) => ({
-  type: addReview,
-  review
+let nextReviewId = 0;
+
+export const addReview = (text) => dispatch => ({
+  type: ADD_REVIEW,
+  id: nextReviewId++,
+  text
 });
 
-export const addReview = addReview;
+
+
